@@ -15,9 +15,10 @@ a{
 .background{
   position:absolute;
   width:100%;
+  height:500px;
 }
 .main{
-height:67*1.1vw;
+height:500px;
 width:100%;
 header{
   position:relative;
@@ -86,21 +87,55 @@ header{
 .about{
   float:left;
   width:50%;
-  height:50%;
+  height:300px;
   background-color:#455a64;
+  box-sizing:content-box;
+  border:solid rgba(255,255,255,1) 0px;
+  h2{
+    @include text;
+    margin-left:30px;
+  }
+  p{
+    @include text;
+    font-size:0.7em;
+    margin:20px 30px;
+  }
+  h6{
+    @include text;
+    font-size:15px;
+    margin:0 0 30px 30px;
+
+  }
+  .NoOfDays{
+    width:40px;
+    height:40px;
+    background-color:white;
+    display:inline-block;
+    color:lightblue;
+    text-align:center;
+    font-size:30px;
+  }
+}
+.NoOfDays1{
+  margin-left:30px;
+}
+#applicationDays{
+  display:inline;
+  margin:0;
+  font-size:12px;
+}
+.internships{
+  width:50%;
+  height:400px;
   box-sizing:border-box;
-  border: solid rgba(255,255,0,1) 5px;
+  border: solid rgba(255,255,0,0) 7px;
+  border-right:3.5px;
+  float:right;
+  img{
+    height:300px;
+    width:100%;
+  }
   h2{
     @include text;
   }
-}
-.internships{
-  background-image:url('C:\Users\Joe\Documents\MENAT\Coding\Github\Pendulum Initial Project\Given Media\mini-project\slider-image-1.jpg');
-  background-size:contain;
-  background-position:center;
-  background-repeat:no-repeat;
-  width:50%;
-  box-sizing:border-box;
-  border: solid rgba(255,255,0,1) 5px;
-  float:right;
 }
