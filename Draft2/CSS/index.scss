@@ -1,5 +1,6 @@
                                                   // VARIABLES
 $hover-color:#00a5d6;
+$border:solid white 10px;
                                                 // ANIMATIONS
 @keyframes chevronTranslate {
   0%, 100% {
@@ -17,6 +18,20 @@ a{
   }
   color:white;
   text-decoration:none;
+  transition:all 300ms ease-in;
+}
+.container-fluid{
+  padding:0;
+}
+.container{
+  width:100%;
+  margin:0;
+  padding:0;
+  .row{
+    width:100%;
+    margin:0;
+    padding:0;
+  }
 }
 // MIXINS
 @mixin text{
@@ -47,13 +62,14 @@ font-weight:400;
     }
   }
   .logo{
-    margin:10px 0px 5px 5px;
+    margin:10px 0px 5px 10px;
     float:left;
     width:100px;
   }
   .header{
+    width:100%;
     overflow:auto;
-    padding:2px 10px;
+    padding-top:2px;
     border-bottom: solid 1px grey;
   }
   .centerImage{
@@ -87,10 +103,10 @@ font-weight:400;
 }
 .section2{
 background-color:#455a64;
-border:solid 10px white;
-border-right:5px;
+border:$border;
 color:white;
 height:350px;
+box-sizing:border-box;
 p{
   font-size:12px;
 }
@@ -117,8 +133,9 @@ p{
   }
 }
 .section3{
-  border: solid 10px white;
+  border:$border;
   border-left:5px;
+  padding:0;
   .item{
     img{
       width:100%;
@@ -142,7 +159,7 @@ p{
     font-weight:lighter;
     position:absolute;
     top:65%;
-    padding-left:10px;
+    padding-left:24px;
   }
   h6{
     @include text;
@@ -153,19 +170,21 @@ p{
 }
 .section4{
   @include text;
-  border:solid white 5px;
+  border-left:$border;
+  border-right:$border;
   background-color:#00a5d6;
   height:290px;
   h2{
-    margin-left:20px;
-    width:550px;
+    margin:0px 0px 0px 20px;
+    padding-top:20px;
+    max-width:550px;
   }
   p{
     margin-left:20px;
   }
   p:nth-of-type(1){
     margin-top:20px;
-    width:600px;
+    max-width:700px;
   }
   p:nth-of-type(2){
     margin-top:40px;
@@ -177,6 +196,7 @@ p{
   }
 }
 .section5{
+  border-top:$border;
   background-color:#222a33;
   overflow:auto;
   height:50px;
@@ -188,9 +208,9 @@ p{
     justify-content: space-between;
     width:110px;
     img{
-      margin-top:15px;
-      width:20px;
-      height:20px;
+      margin-top:12px;
+      width:17px;
+      height:17px;
     }
   }
   p{
@@ -198,5 +218,31 @@ p{
     font-size:10px;
     float:right;
     color:#00caff;
+  }
+}
+
+@media (max-width:630px){
+  .section1{
+  ul{
+    padding:0;
+    li{
+    font-size:10px;
+    margin:20px 10px 5px 15px;
+      }
+    }
+.titleContainer h1{
+    font-size:30px;
+    }
+  }
+  .section4 {
+    height:220px;
+    h2{
+    max-width:400px;
+    font-size:25px;
+    }
+    p{
+      max-width:410px;
+      font-size:13px;
+    }
   }
 }
